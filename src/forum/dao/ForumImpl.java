@@ -2,6 +2,7 @@ package forum.dao;
 
 import forum.model.Post;
 
+import java.sql.SQLOutput;
 import java.time.LocalDate;
 import java.util.Arrays;
 
@@ -99,4 +100,10 @@ public class ForumImpl implements Forum {
     public int size() {
         return size;
     }
+
+//    public void log(){
+//        for (int i = 0; i < posts.length; i++) {
+//            System.out.println(posts[i]);
+//        }
+//    }
 }
