@@ -21,17 +21,17 @@ class ForumTest {
     @org.junit.jupiter.api.BeforeEach
     void setUp() {
         forum = new ForumImpl();
-        date1=LocalDate.now();
+        date1 = LocalDate.now();
         posts = new Post[]{
-                new Post(1, "", "qw", ""),
-                new Post(2, "", "as", ""),
-                new Post(3, "", "zx", ""),
-                new Post(3, "", "er", ""),
-                new Post(4, "", "dfhu", ""),
-                new Post(5, "", "as", ""),
+                new Post(1, "qwe", "qw", "tftf"),
+                new Post(2, "xrxr", "as", "ijij"),
+                new Post(3, "jnujub", "zx", ""),
+                new Post(3, "njn", "er", "kmk"),
+                new Post(4, "nmn", "dfhu", "ki"),
+                new Post(5, "byb", "as", "km"),
         };
         posts[1].setDate(LocalDateTime.now().minusDays(2));
-        date2=LocalDate.now();  // if test is running at 24:00, date2 != date1 :)
+        date2 = LocalDate.now();  // if test is running at 24:00, date2 != date1 :)
         for (int i = 0; i < size0; i++) {
             forum.addPost(posts[i]);
         }
@@ -88,5 +88,12 @@ class ForumTest {
     @org.junit.jupiter.api.Test
     void size() {
         assertEquals(forum.size(), size0);
+    }
+
+    @org.junit.jupiter.api.Test
+    void likesTest(){
+        forum.getPostById(1).addLike();
+        forum.getPostById(1).addLike();
+        assertEquals(forum.getPostById(1).getLikes(),2);
     }
 }

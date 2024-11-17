@@ -12,7 +12,7 @@ public class ForumImpl implements Forum {
     private final ComparePosts comparator = new ComparePosts();
 
     public ForumImpl() {
-        posts=new Post[0];
+        posts = new Post[0];
         size = 0;
     }
 

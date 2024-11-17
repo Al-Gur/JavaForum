@@ -16,7 +16,7 @@ public class Post {
         this.author = author;
         this.content = content;
         date = LocalDateTime.now();
-        likes=0;
+        likes = 0;
     }
 
     public int getPostId() {
@@ -51,7 +51,7 @@ public class Post {
         this.date = date;
     }
 
-    public int addLike(){
+    public int addLike() {
         return ++likes;
     }
 
