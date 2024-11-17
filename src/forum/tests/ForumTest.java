@@ -33,7 +33,9 @@ class ForumTest {
         assertFalse(forum.addPost(posts[3]));
         assertTrue(forum.addPost(posts[4]));
         assertEquals(forum.size(), 4);
-        assertEquals(forum.getPostByAuthor(posts[4].getAuthor()), posts[4]);
+        Post[] added=forum.getPostByAuthor(posts[4].getAuthor());
+        assertEquals(added.length,1);
+        assertEquals(added[0], posts[4]);
     }
 
     @org.junit.jupiter.api.Test
