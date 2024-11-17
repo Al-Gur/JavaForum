@@ -2,7 +2,6 @@ package forum.dao;
 
 import forum.model.Post;
 
-import java.sql.SQLOutput;
 import java.time.LocalDate;
 import java.util.Arrays;
 

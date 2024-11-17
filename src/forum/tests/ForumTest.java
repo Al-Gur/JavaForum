@@ -64,7 +64,7 @@ class ForumTest {
     @org.junit.jupiter.api.Test
     void getPostById() {
         assertEquals(forum.getPostById(posts[2].getPostId()), posts[2]);
-        assertEquals(forum.getPostById(posts[5].getPostId()), null);
+        assertNull(forum.getPostById(posts[5].getPostId()));
     }
 
     @org.junit.jupiter.api.Test
@@ -91,9 +91,9 @@ class ForumTest {
     }
 
     @org.junit.jupiter.api.Test
-    void likesTest(){
+    void likesTest() {
         forum.getPostById(1).addLike();
         forum.getPostById(1).addLike();
-        assertEquals(forum.getPostById(1).getLikes(),2);
+        assertEquals(forum.getPostById(1).getLikes(), 2);
     }
 }
