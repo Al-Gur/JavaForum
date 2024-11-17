@@ -13,7 +13,7 @@ class ForumTest {
             new Post(2, "", "as", ""),
             new Post(3, "", "zx", ""),
             new Post(3, "", "er", ""),
-            new Post(4, "", "df", ""),
+            new Post(4, "", "dfhu", ""),
     };
     private final int size0=3;
 
