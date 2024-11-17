@@ -12,6 +12,8 @@ class ForumTest {
             new Post(1, "", "qw", ""),
             new Post(2, "", "as", ""),
             new Post(3, "", "zx", ""),
+            new Post(3, "", "er", ""),
+            new Post(4, "", "df", ""),
     };
     private final int size0=3;
 
@@ -25,6 +27,10 @@ class ForumTest {
 
     @org.junit.jupiter.api.Test
     void addPost() {
+        assertFalse(forum.addPost(posts[3]));
+        assertTrue(forum.addPost(posts[4]));
+        assertEquals(forum.size(), 4);
+        assertEquals(forum.getPostByAuthor(posts[4].getAuthor()), posts[4]);
     }
 
     @org.junit.jupiter.api.Test
