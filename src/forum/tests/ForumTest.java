@@ -4,17 +4,20 @@ import forum.dao.Forum;
 import forum.dao.ForumImpl;
 import forum.model.Post;
 
+import java.time.LocalDateTime;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class ForumTest {
     private Forum forum;
-    private final Post[] posts={
+    private Post[] posts={
             new Post(1, "", "qw", ""),
             new Post(2, "", "as", ""),
             new Post(3, "", "zx", ""),
             new Post(3, "", "er", ""),
             new Post(4, "", "dfhu", ""),
     };
+
     private final int size0=3;
 
     @org.junit.jupiter.api.BeforeEach
